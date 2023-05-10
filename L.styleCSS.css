@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno Ace SC&family=Arimo');
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+:root{
+  --color-light: rgb(253, 253, 253);
+  --color-primary: #5f7b56;
+  --color-primary-hover: beige;
+  --color-secondary:#a9bc3e;
+  --color-secondary-hover: rgb(130, 144, 101);
+  --font-basic-size: 2rem;
+  --font-secondary-size: 1.2rem;
+}
+
+body, ul{
+  margin: 0;
+  padding: 0;
+}
+
+nav{
+  font-family:'Bruno Ace SC';
+  width: 100%;
+  font-size: 27px;
+  background-color: var(--color-primary);
+  color: var(--color-primary-hover);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+h1 {
+  font-family: 'Arimo';
+  font-size: var(--font-basic-size);
+}
+p {
+  font-size: var(--font-secondary-size);
+}
+
+.skryte {
+  display: none;
+} 
+
+.menu {
+  display: none;
+  padding: 6px;
+  padding-top: 35px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+nav ul {
+  padding-top: 3%;
+}
+
+.nav-obsah {
+  display: flex;
+  margin: auto;
+  width: 80%; max-width: 1000px;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+header{
+  height: 200px;
+  width: 100%;
+  position: relative;
+  color: var(--color-primary);
+  background-color:var(--color-primary-hover);
+}
+
+
+li {
+    display: inline-block;
+    padding-left: 0px;
+  }
+
+li > a {
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+
+li > a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+main{
+    margin:auto;
+    width: 80%; max-width: 1000px;
+    
+}
+
+.image {
+  flex: 1 0 250px;
+  max-width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: cover;
+  margin-top: 78px;
+  /*background-color: blueviolet;*/
+}
+
+#z1 {
+    background-image: url(./zodiac-signsA.webp);
+}
+#z2 {
+    background-image: url(./elementsA.webp);
+}
+#z3 {
+    background-image: url(./planetsA.webp);
+}
+#z4 {
+    background-image: url(./housesA.png);
+}
+
+.napis{
+    height: 200px;
+    padding-top: 75px;
+    font-size: 56px;
+    /*position: absolute;*/
+    text-align: center;
+    padding: 70px 0;
+    color: var(--color-primary);
+    animation-name: color-change;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    grid-area: Na;
+}
+.headerdiv {
+  height: 200px;
+  animation-name: color-change;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 80px);
+  grid-template-areas: 
+  ". St . Mo  Na Na Na Na . Su . Me"
+  ". St . Mo  Na Na Na Na . Su . Me"
+  ". St . Mo  Na Na Na Na . Su . Me"
+  ". St . Mo  Na Na Na Na . Su . Me"
+  ;
+}
+
+/*.headerdiv{
+  font-size: 56px;
+  /*position: absolute;
+  text-align: center;
+  padding: 70px 0;
+}*/
+
+#star {
+    font-size: 125px;
+    color: var(--color-primary);
+    position: absolute;
+    left: 200px;
+    top: 30px;
+    grid-area: St;
+}
+#moon {
+    font-size: 125px;
+    color: var(--color-primary);
+    position: absolute;
+    left: 400px;
+    top: 30px;
+    grid-area: Mo;
+}
+#sun {
+    font-size: 125px;
+    color: var(--color-primary);
+    position: absolute;
+    right: 400px;
+    top: 30px;
+    grid-area: Su;
+}
+#meteor {
+    font-size: 125px;
+    color: var(--color-primary);
+    position: absolute;
+    right: 200px;
+    top: 30px;
+    grid-area: Me;
+}
+#menu-toggle {
+    display: none;
+    font-size: 100px;
+    color:var(--color-light);
+}
+
+img {
+  max-width: 180px;
+}
+
+.text{
+  padding-left: 10px;
+}
+section {
+  flex: 0 1 auto;
+  padding: 10px 0px;
+  display: flex;
+  /*background-image: url('')*/
+}
+
+.navigace {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+  
+  /*.galerie {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 250px);
+    grid-auto-flow: dense;
+  }
+
+  #g1, #g3 {
+    grid-column: 1 / 3;
+  }*/
+  /*#star {
+    font-size: 90px;
+    top: 100px;
+    left: 175px;
+    position:relative;
+
+  }
+  #moon {
+    font-size: 90px;
+    top: 100px;
+    left: 190px;
+    position:relative;
+  }
+  #sun {
+    font-size: 90px;
+    top: 100px;
+  }
+  #meteor {
+    font-size: 90px;
+    top: 100px;
+  }
+}*/
+
+footer {
+    background-color:var(--color-primary);
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+
+form {
+    max-width: 1000px;
+    margin: auto;
+    display:block;
+    text-align: center;
+}
+form > input, form > button {
+    padding: 6px;
+    border: 2px solid var(--color-primary);
+    font-size: 20px;
+}
+
+form > input[type=email] {
+    flex: 0 1 100%;
+    border-radius: 12px 12px;
+}
+form > input[type=email]:focus {
+    color:var(--color-primary);
+    outline:none;
+}
+form > button {
+    flex: 0 0 80px;
+    background-color: var(--color-secondary);
+    border-radius: 12px 12px;
+    cursor: pointer;
+}
+
+button > a:link {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+button > a:visited {
+    color:  var(--color-primary);
+}
+button > a:hover {
+    color: var(--color-secondary-hover);
+}
+
+
+.g1 {
+  grid-area: g1;
+  background-image: url(./aries.webp);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /*background-size: cover;*/
+}
+.g2 {
+  grid-area: g2;
+  background-image: url(./taurus.avif);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.g3 {
+  grid-area: g3;
+  background-image: url(./gemini.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.g4 {
+  grid-area: g4;
+  background-image: url(./cancer.webp);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.g5 {
+  grid-area: g5;
+  background-image: url(./leo.webp);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#galerie {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(10, 120px);
+  grid-template-rows: repeat(2, 140px);
+  grid-template-areas: 
+    "g1 g1 g2 g3 g3 g4 g5 g5"
+    "g1 g1 . g3 g3 . g5 g5";
+}
+
+.popup-overlay {
+  background-color: rgba(52, 52, 52, 0.52);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.popup-window {
+  width: 400px;
+  height: 400px;
+  padding: 1rem;
+  position: absolute;
+  left: calc((100vw - 400px)/2);
+  top: calc((100vh - 400px)/2);
+  background: rgb(34,193,195);
+  background: linear-gradient(163deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  border-radius: 12px;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.72);
+}
+
+.hourglass {
+  fill: rgb(27, 49, 36);
+  stroke: beige;
+  stroke-width: 10px;
+}
+ 
+@keyframes color-change{
+  0%   {background-color:beige; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:#a9bc3e; left:200px; top:200px;}
+  75%  {background-color:rgb(130, 144, 101); left:0px; top:200px;}
+  100% {background-color:#5f7b56; left:0px; top:0px;}
+}
+@media only screen and (max-width:780px) {
+  nav li {
+  display: block;
+}
+
+  .menu {
+    display: block;
+  }
+  section {
+    flex-direction: column;
+  }
+  #image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .image {
+    flex: 1 0 250px;
+  }
+  .nadpis {
+    top: 30px;
+    left: 100px;
+    position:absolute;
+  }
+  #menu-toggle {
+    display: block;
+  }
+  #galerie {
+    grid-template-columns: repeat(2, 140px);
+    grid-template-rows: repeat(10, 120px);
+    grid-auto-flow: dense;
+    grid-template-areas: 
+    "g1 g1"
+    "g1 g1"
+    "g2 g2"
+    "g2 g2"
+    "g3 g3"
+    "g3 g3"
+    "g4 g4"
+    "g4 g4"
+    "g5 g5"
+    "g5 g5"
+    ;
+  }
+  .napis{
+    padding-top: 60px;
+    width: 100%;
+  }
+  #star{
+    font-size: 500%;
+  }
+  #moon{
+    font-size: 500%;    
+  }
+  #sun{
+    font-size: 500%;
+  }
+  #meteor{
+    font-size: 500%;
+  }
+  .headerdiv{
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 60px);
+    grid-template-areas: 
+    "St Mo Na Su Me"
+    "St Mo Na Su Me"
+
+    ;
+  }
+} 
